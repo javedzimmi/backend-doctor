@@ -15,7 +15,10 @@ connectCloudinary()
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://doctor-frontend-mid46r11g-javed-alams-projects-0ab9e283.vercel.app/",  // 👈 yahan apna actual deployed frontend URL daalo
+    credentials: true  // agar cookies use ho rahi hain, warna hata bhi sakte ho
+}));
 
 
 // API endpoint
